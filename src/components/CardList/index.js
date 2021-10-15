@@ -24,12 +24,10 @@ export default class CardList extends Component {
           const data = res.data;
           const slice = data.slice(this.state.offset, this.state.offset + this.state.perPage)
           const postData = slice.map(pd => 
-            
-              <div>
-                <p>{pd.title}</p>
-                <img src={pd.thumbnailUrl} alt=""/>
-              </div>
-           
+            <div>
+              <p>{pd.title}</p>
+              <img src={pd.thumbnailUrl} alt=""/>
+            </div>
           )
 
           this.setState({
